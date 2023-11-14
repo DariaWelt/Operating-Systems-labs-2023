@@ -19,7 +19,7 @@ Reminder& Reminder::getInstance() {
 }
 
 void Reminder::init(std::string configFile) {
-    openlog("Reminder", LOG_NDELAY | LOG_PID | LOG_PERROR, LOG_USER);
+    openlog("Reminder", LOG_NDELAY | LOG_PID, LOG_USER);
     syslog(LOG_INFO, "Logger successfully opened");
     syslog(LOG_INFO, "Daemon initialization");
 
